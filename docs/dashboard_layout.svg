@@ -1,0 +1,195 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="100%" height="100%">
+  <defs>
+    <filter id="cshadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="3" stdDeviation="5" flood-opacity="0.25" />
+    </filter>
+    <linearGradient id="headerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f2b48" />
+      <stop offset="100%" stop-color="#1b4965" />
+    </linearGradient>
+    <linearGradient id="cardGradPrimary" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14213d" />
+      <stop offset="100%" stop-color="#1b2a4a" />
+    </linearGradient>
+    <linearGradient id="targetMetGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f3d2e" />
+      <stop offset="100%" stop-color="#165b44" />
+    </linearGradient>
+    <linearGradient id="statusGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3d2c0f" />
+      <stop offset="100%" stop-color="#5b4316" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background Canvas -->
+  <rect width="100%" height="100%" fill="#0a0e17" rx="8" />
+  
+  <!-- Title / App Banner -->
+  <rect x="0" y="0" width="1200" height="42" fill="url(#headerGrad)" />
+  <circle cx="20" cy="21" r="6" fill="#f2c811" />
+  <text x="35" y="26" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="15" font-weight="700" fill="#ffffff">Module 12: Sales Performance &amp; Target Realization Dashboard</text>
+  <text x="1175" y="26" font-family="Segoe UI, sans-serif" font-size="12" fill="#888ea8" text-anchor="end">Canvas Aspect: 16:9 (1920 × 1080 FHD)</text>
+
+  <!-- Visual 1: Slicer (Timeline Filter) -->
+  <g transform="translate(25, 52)" filter="url(#cshadow)">
+    <rect width="1150" height="75" rx="6" fill="#111927" stroke="#233554" stroke-width="1.2" />
+    <text x="16" y="24" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#64ffda">📅 Sales Performance Timeline Filter (Order Date)</text>
+    
+    <!-- Timeline Slider Bar representation -->
+    <rect x="25" y="42" width="1100" height="8" rx="4" fill="#1d2d44" />
+    <rect x="180" y="42" width="750" height="8" rx="4" fill="#0078d4" />
+    <circle cx="180" cy="46" r="8" fill="#ffffff" stroke="#0078d4" stroke-width="3" />
+    <circle cx="930" cy="46" r="8" fill="#ffffff" stroke="#0078d4" stroke-width="3" />
+    <rect x="25" y="36" width="130" height="20" rx="3" fill="#1b2a4a" />
+    <text x="90" y="50" font-family="Consolas, monospace" font-size="11" fill="#79c0ff" text-anchor="middle">2023-01-01</text>
+    <rect x="945" y="36" width="130" height="20" rx="3" fill="#1b2a4a" />
+    <text x="1010" y="50" font-family="Consolas, monospace" font-size="11" fill="#79c0ff" text-anchor="middle">2024-12-31</text>
+    <text x="1115" y="24" font-family="Segoe UI, sans-serif" font-size="11" fill="#8b949e" text-anchor="end">Slicer Mode: Between</text>
+  </g>
+
+  <!-- Row 1: Four Executive KPI Cards -->
+  <!-- Card 1: Total Sales Revenue -->
+  <g transform="translate(25, 137)" filter="url(#cshadow)">
+    <rect width="272" height="110" rx="6" fill="url(#cardGradPrimary)" stroke="#1f4287" stroke-width="1.2" />
+    <text x="14" y="24" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#79c0ff">TOTAL SALES REVENUE (BDT)</text>
+    <text x="14" y="65" font-family="Segoe UI, sans-serif" font-size="28" font-weight="800" fill="#ffffff">৳ 14,850,200</text>
+    <text x="14" y="94" font-family="Consolas, monospace" font-size="10" fill="#8b949e">Measure: Analysis[Total Sales]</text>
+    <rect x="238" y="12" width="22" height="22" rx="4" fill="#1f4287" />
+    <text x="249" y="27" font-family="Segoe UI, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">৳</text>
+  </g>
+
+  <!-- Card 2: Average Order Value -->
+  <g transform="translate(317, 137)" filter="url(#cshadow)">
+    <rect width="272" height="110" rx="6" fill="url(#cardGradPrimary)" stroke="#1f4287" stroke-width="1.2" />
+    <text x="14" y="24" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#79c0ff">AVERAGE ORDER VALUE (BDT)</text>
+    <text x="14" y="65" font-family="Segoe UI, sans-serif" font-size="28" font-weight="800" fill="#ffffff">৳ 4,125.05</text>
+    <text x="14" y="94" font-family="Consolas, monospace" font-size="10" fill="#8b949e">Measure: Analysis[Average Sales]</text>
+    <rect x="238" y="12" width="22" height="22" rx="4" fill="#1f4287" />
+    <text x="249" y="27" font-family="Segoe UI, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">⌀</text>
+  </g>
+
+  <!-- Card 3: Total Orders Placed -->
+  <g transform="translate(610, 137)" filter="url(#cshadow)">
+    <rect width="272" height="110" rx="6" fill="url(#cardGradPrimary)" stroke="#1f4287" stroke-width="1.2" />
+    <text x="14" y="24" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#79c0ff">TOTAL ORDERS PLACED</text>
+    <text x="14" y="65" font-family="Segoe UI, sans-serif" font-size="28" font-weight="800" fill="#ffffff">3,600</text>
+    <text x="14" y="94" font-family="Consolas, monospace" font-size="10" fill="#8b949e">Measure: Analysis[Total Order Count]</text>
+    <rect x="238" y="12" width="22" height="22" rx="4" fill="#1f4287" />
+    <text x="249" y="27" font-family="Segoe UI, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">📦</text>
+  </g>
+
+  <!-- Card 4: Unique Customers Served -->
+  <g transform="translate(903, 137)" filter="url(#cshadow)">
+    <rect width="272" height="110" rx="6" fill="url(#cardGradPrimary)" stroke="#1f4287" stroke-width="1.2" />
+    <text x="14" y="24" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#79c0ff">UNIQUE CUSTOMERS SERVED</text>
+    <text x="14" y="65" font-family="Segoe UI, sans-serif" font-size="28" font-weight="800" fill="#ffffff">1,420</text>
+    <text x="14" y="94" font-family="Consolas, monospace" font-size="10" fill="#8b949e">Measure: Analysis[Unique Customers]</text>
+    <rect x="238" y="12" width="22" height="22" rx="4" fill="#1f4287" />
+    <text x="249" y="27" font-family="Segoe UI, sans-serif" font-size="12" fill="#ffffff" text-anchor="middle">👥</text>
+  </g>
+
+  <!-- Row 2: Two Target Analytics KPI Cards -->
+  <!-- Card 5: Target Achievement % -->
+  <g transform="translate(25, 257)" filter="url(#cshadow)">
+    <rect width="564" height="115" rx="6" fill="url(#targetMetGrad)" stroke="#107c41" stroke-width="1.5" />
+    <text x="16" y="26" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#7ee787">OVERALL SALES TARGET ACHIEVEMENT %</text>
+    <text x="16" y="74" font-family="Segoe UI, sans-serif" font-size="36" font-weight="800" fill="#56d364">108.45%</text>
+    <text x="16" y="100" font-family="Consolas, monospace" font-size="10" fill="#8b949e">Measure: Analysis[Target Achievement %] (Formatted as Percentage)</text>
+    <rect x="526" y="14" width="24" height="24" rx="4" fill="#107c41" />
+    <text x="538" y="31" font-family="Segoe UI, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">🎯</text>
+  </g>
+
+  <!-- Card 6: Target Realization Status -->
+  <g transform="translate(611, 257)" filter="url(#cshadow)">
+    <rect width="564" height="115" rx="6" fill="url(#statusGrad)" stroke="#e3b341" stroke-width="1.5" />
+    <text x="16" y="26" font-family="Segoe UI, sans-serif" font-size="12" font-weight="700" fill="#f0e68c">TARGET REALIZATION STATUS</text>
+    <text x="16" y="74" font-family="Segoe UI, sans-serif" font-size="36" font-weight="800" fill="#ffd166">Target Met</text>
+    <text x="16" y="100" font-family="Consolas, monospace" font-size="10" fill="#8b949e">Measure: Analysis[Target Status] (Dynamic Conditional Logic)</text>
+    <rect x="526" y="14" width="24" height="24" rx="4" fill="#d4a373" />
+    <text x="538" y="31" font-family="Segoe UI, sans-serif" font-size="14" fill="#ffffff" text-anchor="middle">✓</text>
+  </g>
+
+  <!-- Bottom: Table Visual -->
+  <g transform="translate(25, 382)" filter="url(#cshadow)">
+    <rect width="1150" height="275" rx="6" fill="#111927" stroke="#233554" stroke-width="1.2" />
+    <rect x="0" y="0" width="1150" height="34" rx="6" fill="#1a273f" />
+    <text x="16" y="22" font-family="Segoe UI, sans-serif" font-size="13" font-weight="700" fill="#ffffff">📊 Sales Performance &amp; Target Realization Breakdown by Product</text>
+    <text x="1135" y="22" font-family="Segoe UI, sans-serif" font-size="11" fill="#58a6ff" text-anchor="end">Sorted by: Total Sales (Descending) ▼</text>
+
+    <!-- Table Header Row -->
+    <rect x="10" y="42" width="1130" height="28" fill="#141f33" />
+    <text x="25" y="60" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#79c0ff">Product</text>
+    <text x="230" y="60" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="end">Total Sales (BDT)</text>
+    <text x="400" y="60" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="end">Average Sales (BDT)</text>
+    <text x="560" y="60" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="end">Order Count</text>
+    <text x="730" y="60" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="end">Unique Customers</text>
+    <text x="920" y="60" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="end">Target Achieved %</text>
+    <text x="1080" y="60" font-family="Segoe UI, sans-serif" font-size="11" font-weight="700" fill="#79c0ff" text-anchor="middle">Target Status</text>
+
+    <!-- Table Data Rows -->
+    <!-- Row 1 -->
+    <rect x="10" y="74" width="1130" height="28" fill="#0d1522" />
+    <text x="25" y="92" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#ffffff">Smartphones &amp; Handsets</text>
+    <text x="230" y="92" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">৳ 5,420,000</text>
+    <text x="400" y="92" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">৳ 6,775.00</text>
+    <text x="560" y="92" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">800</text>
+    <text x="730" y="92" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">512</text>
+    <text x="920" y="92" font-family="Consolas, monospace" font-size="11" fill="#56d364" font-weight="bold" text-anchor="end">112.50%</text>
+    <rect x="1025" y="79" width="110" height="18" rx="4" fill="#107c41" opacity="0.3" />
+    <text x="1080" y="92" font-family="Segoe UI, sans-serif" font-size="10" font-weight="bold" fill="#7ee787" text-anchor="middle">Target Met</text>
+
+    <!-- Row 2 -->
+    <rect x="10" y="106" width="1130" height="28" fill="#111a2a" />
+    <text x="25" y="124" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#ffffff">Laptops &amp; Computing</text>
+    <text x="230" y="124" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">৳ 4,180,500</text>
+    <text x="400" y="124" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">৳ 8,361.00</text>
+    <text x="560" y="124" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">500</text>
+    <text x="730" y="124" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">340</text>
+    <text x="920" y="124" font-family="Consolas, monospace" font-size="11" fill="#56d364" font-weight="bold" text-anchor="end">104.51%</text>
+    <rect x="1025" y="111" width="110" height="18" rx="4" fill="#107c41" opacity="0.3" />
+    <text x="1080" y="124" font-family="Segoe UI, sans-serif" font-size="10" font-weight="bold" fill="#7ee787" text-anchor="middle">Target Met</text>
+
+    <!-- Row 3 -->
+    <rect x="10" y="138" width="1130" height="28" fill="#0d1522" />
+    <text x="25" y="156" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#ffffff">Tablets &amp; E-Readers</text>
+    <text x="230" y="156" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">৳ 2,650,200</text>
+    <text x="400" y="156" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">৳ 3,786.00</text>
+    <text x="560" y="156" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">700</text>
+    <text x="730" y="156" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">410</text>
+    <text x="920" y="156" font-family="Consolas, monospace" font-size="11" fill="#56d364" font-weight="bold" text-anchor="end">106.01%</text>
+    <rect x="1025" y="143" width="110" height="18" rx="4" fill="#107c41" opacity="0.3" />
+    <text x="1080" y="156" font-family="Segoe UI, sans-serif" font-size="10" font-weight="bold" fill="#7ee787" text-anchor="middle">Target Met</text>
+
+    <!-- Row 4 -->
+    <rect x="10" y="170" width="1130" height="28" fill="#111a2a" />
+    <text x="25" y="188" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#ffffff">Monitors &amp; Displays</text>
+    <text x="230" y="188" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">৳ 1,450,000</text>
+    <text x="400" y="188" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">৳ 2,416.67</text>
+    <text x="560" y="188" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">600</text>
+    <text x="730" y="188" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">325</text>
+    <text x="920" y="188" font-family="Consolas, monospace" font-size="11" fill="#e3b341" font-weight="bold" text-anchor="end">96.67%</text>
+    <rect x="1025" y="175" width="110" height="18" rx="4" fill="#d4a373" opacity="0.3" />
+    <text x="1080" y="188" font-family="Segoe UI, sans-serif" font-size="10" font-weight="bold" fill="#ffa657" text-anchor="middle">Below Target</text>
+
+    <!-- Row 5 -->
+    <rect x="10" y="202" width="1130" height="28" fill="#0d1522" />
+    <text x="25" y="220" font-family="Segoe UI, sans-serif" font-size="11" font-weight="600" fill="#ffffff">Audio &amp; Accessories</text>
+    <text x="230" y="220" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">৳ 1,149,500</text>
+    <text x="400" y="220" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">৳ 1,149.50</text>
+    <text x="560" y="220" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">1,000</text>
+    <text x="730" y="220" font-family="Consolas, monospace" font-size="11" fill="#c9d1d9" text-anchor="end">680</text>
+    <text x="920" y="220" font-family="Consolas, monospace" font-size="11" fill="#56d364" font-weight="bold" text-anchor="end">114.95%</text>
+    <rect x="1025" y="207" width="110" height="18" rx="4" fill="#107c41" opacity="0.3" />
+    <text x="1080" y="220" font-family="Segoe UI, sans-serif" font-size="10" font-weight="bold" fill="#7ee787" text-anchor="middle">Target Met</text>
+
+    <!-- Summary / Total Row -->
+    <rect x="10" y="234" width="1130" height="30" fill="#1c2d4a" stroke="#233554" stroke-width="1" />
+    <text x="25" y="253" font-family="Segoe UI, sans-serif" font-size="11" font-weight="800" fill="#ffffff">Total / Overall Portfolio</text>
+    <text x="230" y="253" font-family="Consolas, monospace" font-size="11" font-weight="800" fill="#ffffff" text-anchor="end">৳ 14,850,200</text>
+    <text x="400" y="253" font-family="Consolas, monospace" font-size="11" font-weight="800" fill="#ffffff" text-anchor="end">৳ 4,125.05</text>
+    <text x="560" y="253" font-family="Consolas, monospace" font-size="11" font-weight="800" fill="#ffffff" text-anchor="end">3,600</text>
+    <text x="730" y="253" font-family="Consolas, monospace" font-size="11" font-weight="800" fill="#ffffff" text-anchor="end">1,420</text>
+    <text x="920" y="253" font-family="Consolas, monospace" font-size="11" font-weight="800" fill="#56d364" text-anchor="end">108.45%</text>
+    <text x="1080" y="253" font-family="Segoe UI, sans-serif" font-size="10" font-weight="800" fill="#7ee787" text-anchor="middle">Target Met</text>
+  </g>
+</svg>

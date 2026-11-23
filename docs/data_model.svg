@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 480" width="100%" height="100%">
+  <defs>
+    <linearGradient id="gradHeaderDim" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1f4287" />
+      <stop offset="100%" stop-color="#278ea5" />
+    </linearGradient>
+    <linearGradient id="gradHeaderFact" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1e3a5f" />
+      <stop offset="100%" stop-color="#0f4c81" />
+    </linearGradient>
+    <linearGradient id="gradHeaderMeas" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#107c41" />
+      <stop offset="100%" stop-color="#2e7d32" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="4" stdDeviation="6" flood-opacity="0.25" />
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M 0 1 L 8 5 L 0 9 z" fill="#58a6ff" />
+    </marker>
+  </defs>
+
+  <!-- Background -->
+  <rect width="100%" height="100%" fill="#0d1117" rx="12" />
+  
+  <!-- Header -->
+  <text x="480" y="42" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="22" font-weight="700" fill="#f0f6fc" text-anchor="middle">Power BI Semantic Data Model — Module 12</text>
+  <text x="480" y="66" font-family="-apple-system, BlinkMacSystemFont, Segoe UI, Roboto, sans-serif" font-size="13" fill="#8b949e" text-anchor="middle">Sales Analytics Star Schema with Centralized Analysis Measures Table</text>
+
+  <!-- Customers Table (Dimension) -->
+  <g transform="translate(60, 110)" filter="url(#shadow)">
+    <rect width="250" height="310" rx="8" fill="#161b22" stroke="#30363d" stroke-width="1.5" />
+    <path d="M 0 8 Q 0 0 8 0 L 242 0 Q 250 0 250 8 L 250 42 L 0 42 Z" fill="url(#gradHeaderDim)" />
+    <text x="14" y="27" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#ffffff">👥 Customers (Dimension)</text>
+    <g font-family="Consolas, monospace" font-size="12" fill="#c9d1d9">
+      <text x="16" y="70" fill="#e3b341" font-weight="bold">🔑 Customer ID (PK)</text>
+      <text x="16" y="98">   Customer Name</text>
+      <text x="16" y="126">   Customer Email</text>
+      <text x="16" y="154">   Region / City</text>
+      <text x="16" y="182">   Customer Segment</text>
+      <text x="16" y="210">   Registration Date</text>
+      <line x1="12" y1="228" x2="238" y2="228" stroke="#30363d" stroke-width="1" />
+      <text x="16" y="252" fill="#8b949e" font-size="11">Type: Master Dimension</text>
+      <text x="16" y="274" fill="#8b949e" font-size="11">Cardinality: 1 (One)</text>
+      <text x="16" y="296" fill="#58a6ff" font-size="11">Cross-filter: Single (→)</text>
+    </g>
+  </g>
+
+  <!-- Relationship Connector Line -->
+  <path d="M 310 180 L 375 180" fill="none" stroke="#58a6ff" stroke-width="2.5" marker-end="url(#arrow)" />
+  <circle cx="310" cy="180" r="4" fill="#e3b341" />
+  <text x="318" y="172" font-family="Consolas, monospace" font-size="12" font-weight="bold" fill="#e3b341">1</text>
+  <text x="360" y="172" font-family="Consolas, monospace" font-size="14" font-weight="bold" fill="#58a6ff">*</text>
+
+  <!-- Sales Data Table (Fact) -->
+  <g transform="translate(375, 95)" filter="url(#shadow)">
+    <rect width="250" height="340" rx="8" fill="#161b22" stroke="#58a6ff" stroke-width="1.8" />
+    <path d="M 0 8 Q 0 0 8 0 L 242 0 Q 250 0 250 8 L 250 42 L 0 42 Z" fill="url(#gradHeaderFact)" />
+    <text x="14" y="27" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#58a6ff">📊 Sales Data (Fact Table)</text>
+    <g font-family="Consolas, monospace" font-size="12" fill="#c9d1d9">
+      <text x="16" y="70" fill="#e3b341">🔑 Order ID (PK)</text>
+      <text x="16" y="98" fill="#79c0ff" font-weight="bold">🔗 Customer ID (FK)</text>
+      <text x="16" y="126" fill="#7ee787">📅 Order Date (Slicer)</text>
+      <text x="16" y="154">📦 Product (Category)</text>
+      <text x="16" y="182">🔢 Quantity Sold</text>
+      <text x="16" y="210">💵 Unit Price</text>
+      <text x="16" y="238">💰 Sales Amount (BDT)</text>
+      <line x1="12" y1="256" x2="238" y2="256" stroke="#30363d" stroke-width="1" />
+      <text x="16" y="280" fill="#8b949e" font-size="11">Type: Transactional Fact</text>
+      <text x="16" y="302" fill="#8b949e" font-size="11">Granularity: Order-Line Level</text>
+      <text x="16" y="324" fill="#8b949e" font-size="11">Storage: In-Memory VertiPaq</text>
+    </g>
+  </g>
+
+  <!-- Analysis Table (Dedicated DAX Measures Hub) -->
+  <g transform="translate(670, 100)" filter="url(#shadow)">
+    <rect width="240" height="330" rx="8" fill="#161b22" stroke="#238636" stroke-width="1.8" />
+    <path d="M 0 8 Q 0 0 8 0 L 232 0 Q 240 0 240 8 L 240 42 L 0 42 Z" fill="url(#gradHeaderMeas)" />
+    <text x="14" y="27" font-family="Segoe UI, sans-serif" font-size="14" font-weight="700" fill="#ffffff">📐 Analysis (Measures Hub)</text>
+    <g font-family="Consolas, monospace" font-size="12" fill="#c9d1d9">
+      <text x="14" y="68" fill="#7ee787" font-weight="bold">Core Executive Measures:</text>
+      <text x="14" y="96" fill="#58a6ff">⚡ [Total Sales]</text>
+      <text x="14" y="124" fill="#58a6ff">⚡ [Average Sales]</text>
+      <text x="14" y="152" fill="#58a6ff">⚡ [Total Order Count]</text>
+      <text x="14" y="180" fill="#58a6ff">⚡ [Unique Customers]</text>
+      <line x1="10" y1="198" x2="230" y2="198" stroke="#30363d" stroke-width="1" />
+      <text x="14" y="222" fill="#e3b341" font-weight="bold">Target Analytics:</text>
+      <text x="14" y="250" fill="#ffa657">🎯 [Target Achievement %]</text>
+      <text x="14" y="278" fill="#ffa657">🎯 [Target Status]</text>
+      <line x1="10" y1="294" x2="230" y2="294" stroke="#30363d" stroke-width="1" />
+      <text x="14" y="316" fill="#8b949e" font-size="11">Pattern: Dedicated Calc Hub</text>
+    </g>
+  </g>
+</svg>
