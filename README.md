@@ -249,8 +249,8 @@ git add .
 # 4. Commit the refined project
 git commit -m "feat: complete refined Power BI report for Module 12 Assignment"
 
-# 5. Link to your GitHub repository (replace with your repo URL)
-git remote add origin https://github.com/nuhan1411/<your-repo-name>.git
+# 5. Link to your GitHub repository
+git remote add origin https://github.com/nuhan1411/another_project_V.git
 
 # 6. Push to GitHub main branch
 git push -u origin main
